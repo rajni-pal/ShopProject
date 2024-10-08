@@ -109,6 +109,11 @@ function onClickItem(e) {
 }
 
 function setItemToEdit(value) {
+  if(value.tagName==='UL')
+  {
+    alert('Select one item.')
+    return;
+  }
   isEditMode = true;
   itemList.querySelectorAll("li").forEach((i) => i.classList.remove("edit"));
   value.classList.add("edit");
